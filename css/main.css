@@ -1524,6 +1524,9 @@ pre .javascript .function {
   font-size: 14px;
   margin-top: 2px;
 }
+.post-wordcount {
+  display: inline-block;
+}
 .post-meta-divider {
   margin: 0 0.5em;
 }
@@ -1620,7 +1623,7 @@ pre .javascript .function {
 .posts-expand .post-eof {
   display: block;
   margin: 80px auto 60px;
-  width: 8%;
+  width: 90%;
   height: 1px;
   background: #ccc;
   text-align: center;
@@ -1838,7 +1841,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ec6b4d;
+  background: #0660cc;
 }
 .links-of-blogroll {
   font-size: 13px;
