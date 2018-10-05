@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="demo," />
+  <meta name="keywords" content="project," />
 
 
 
@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="二级导航栏，可以自行扩展并且复用到项目中。">
-<meta name="keywords" content="demo">
+<meta name="description" content="基于vue.js实现去哪儿页面，移动端">
+<meta name="keywords" content="project">
 <meta property="og:type" content="article">
-<meta property="og:title" content="100个小demo(二)">
-<meta property="og:url" content="https://lzf666.github.io/2018/09/12/100demos-2/index.html">
+<meta property="og:title" content="去哪儿项目总结（一）首页">
+<meta property="og:url" content="https://lzf666.github.io/2018/10/01/travel-01/index.html">
 <meta property="og:site_name" content="大斧子">
-<meta property="og:description" content="二级导航栏，可以自行扩展并且复用到项目中。">
+<meta property="og:description" content="基于vue.js实现去哪儿页面，移动端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://s8.sinaimg.cn/middle/006fVMQYzy7nLS8C0ppf7&690">
-<meta property="og:updated_time" content="2018-09-20T03:56:35.974Z">
+<meta property="og:image" content="https://lzf666.github.io/2018/10/01/travel-01/travel/travel-01_LI.jpg">
+<meta property="og:image" content="https://lzf666.github.io/2018/10/01/travel-01/travel/travel-02.jpg">
+<meta property="og:updated_time" content="2018-10-05T12:00:47.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="100个小demo(二)">
-<meta name="twitter:description" content="二级导航栏，可以自行扩展并且复用到项目中。">
-<meta name="twitter:image" content="http://s8.sinaimg.cn/middle/006fVMQYzy7nLS8C0ppf7&690">
+<meta name="twitter:title" content="去哪儿项目总结（一）首页">
+<meta name="twitter:description" content="基于vue.js实现去哪儿页面，移动端">
+<meta name="twitter:image" content="https://lzf666.github.io/2018/10/01/travel-01/travel/travel-01_LI.jpg">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://lzf666.github.io/2018/09/12/100demos-2/"/>
+  <link rel="canonical" href="https://lzf666.github.io/2018/10/01/travel-01/"/>
 
 
 
 
 
-  <title>100个小demo(二) | 大斧子</title>
+  <title>去哪儿项目总结（一）首页 | 大斧子</title>
   
 
 
@@ -277,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/09/12/100demos-2/">
+    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/01/travel-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuzifu">
@@ -294,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">100个小demo(二)</h1>
+          <h1 class="post-title" itemprop="name headline">去哪儿项目总结（一）首页</h1>
         
 
         <div class="post-meta">
@@ -306,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T23:57:43+08:00">
-                2018-09-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T22:05:50+08:00">
+                2018-10-01
               </time>
             
 
@@ -329,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/100demos/" itemprop="url" rel="index">
-                    <span itemprop="name">100demos</span>
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
                   </a>
                 </span>
 
@@ -362,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  371字
+                  1,157字
                 </span>
               
 
@@ -378,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2分钟
+                  5分钟
                 </span>
               
             </div>
@@ -386,7 +387,7 @@
 
           
               <div class="post-description">
-                  二级导航栏，可以自行扩展并且复用到项目中。
+                  基于vue.js实现去哪儿页面，移动端
               </div>
           
 
@@ -403,9 +404,33 @@
       
 
       
-        <p>&emsp;&emsp;今天，我们要实现的是这样一个效果，如下图所示：<br><img src="http://s8.sinaimg.cn/middle/006fVMQYzy7nLS8C0ppf7&amp;690" alt="Markdown"><br>&emsp;&emsp;它的结构分为两部分，最外层是一个 ul 列表，直接子元素左浮动，其中需要展现二级菜单的 li 再次嵌套了一个 div，然后利用绝对定位和<code>display:none;</code>来控制二级菜单的显示。<br>&emsp;&emsp;代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- html --&gt;</span><br><span class="line"> &lt;div class=&quot;layout&quot;&gt;</span><br><span class="line">    &lt;ul class=&quot;nav&quot;&gt;</span><br><span class="line">      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;&lt;a href=&quot;&quot;&gt;作品&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;&lt;a href=&quot;&quot;&gt;更多</span><br><span class="line">          &lt;div class=&quot;child&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;#&quot;&gt;博客&lt;/a&gt;</span><br><span class="line">            &lt;a href=&quot;#&quot;&gt;知乎&lt;/a&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- css --&gt;</span><br><span class="line">  .layout &#123;</span><br><span class="line">   width: 600px;</span><br><span class="line">   margin: 0 auto;</span><br><span class="line"> &#125;</span><br><span class="line"> .nav &#123;</span><br><span class="line">   padding: 0;</span><br><span class="line">   background-color: #f1f1f1;</span><br><span class="line">   list-style: none;</span><br><span class="line">   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;</span><br><span class="line"> &#125;</span><br><span class="line"> /* 子元素绝对定位是相对父元素的，因此父元素需要写相对定位 */</span><br><span class="line"></span><br><span class="line"> .nav&gt;li &#123;</span><br><span class="line">   position: relative;</span><br><span class="line">   float: left;</span><br><span class="line"> &#125;</span><br><span class="line"> a &#123;</span><br><span class="line">   display: block;</span><br><span class="line">   text-decoration: none;</span><br><span class="line">   color: #333;</span><br><span class="line">   padding: 16px 16px;</span><br><span class="line"> &#125;</span><br><span class="line"> a:hover &#123;</span><br><span class="line">   display: block;</span><br><span class="line">   background-color: #ccc;</span><br><span class="line"> &#125;</span><br><span class="line"> /* 二级菜单的布局*/</span><br><span class="line"></span><br><span class="line"> .child &#123;</span><br><span class="line">   position: absolute;</span><br><span class="line">   display: none;</span><br><span class="line">   min-width: 200px;</span><br><span class="line">   color: black;</span><br><span class="line">   background-color: white;</span><br><span class="line">   top: 100%;</span><br><span class="line">   left: 0;</span><br><span class="line">   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;</span><br><span class="line"> &#125;</span><br><span class="line"> /*   悬浮展示 */</span><br><span class="line"></span><br><span class="line"> .nav li:hover .child &#123;</span><br><span class="line">   display: block;</span><br><span class="line"> &#125;</span><br><span class="line"> /* 清除浮动 */</span><br><span class="line"></span><br><span class="line"> .nav::afert &#123;</span><br><span class="line">   content: &apos;&apos;;</span><br><span class="line">   display: block;</span><br><span class="line">   clear: both;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;今日的二级菜单 demo 结束，感谢阅读！</p>
+        <p>&emsp;&emsp;最近看了慕课网上的一个实战教程，把里面的代码认真动手敲了一遍，还是有蛮多的收获的，下面是我的一些个人总结，主要是一些大概的思路和部分关键知识点。<br>&emsp;&emsp;首页如下：<br><img src="/2018/10/01/travel-01/travel/travel-01_LI.jpg" alt="travel-01"><br><img src="/2018/10/01/travel-01/travel/travel-02.jpg" alt="travel-01"><br>我把它分为 5 个部分，第 1 部分是头部，第 2 部分是一个轮播图，可以左右滑动，第 3 部分是图标列表，第 4 部分是一个景点的展示列表，第 5 部分和第 5 部分类似，只是布局不同。<br>这 5 个部分分别作为子组件，最后在 Home.vue 中引用。</p>
+<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>第 1 部分主要是使用了 felx 布局，关键点有以下几个：</p>
+<ol>
+<li>整个项目使用了 stylus，为了防止组件之间样式进行干扰，在 style 标签上添加了 scope 限制。<br>如下所示：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;stylus&quot; scoped&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>图标主要是引入了 iconfont，这里不过多叙述，网上相关的资源很多，可以去看看是如何使用和引入的。</p>
+</li>
+<li><p>在样式中，比如字体颜色，背景颜色等我们也会在其它组件中使用到，因此把这些常用的元素保存起来，需要的时候直接引用即可。<br>引用代码如下：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@import &apos;~styles/varibles.styl&apos;</span><br><span class="line">.header</span><br><span class="line">  line-height $headerHeight</span><br><span class="line">  display flex</span><br><span class="line">  background-color $bgColor</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>在使用 import 引入 varibles.styl 文件时，我们发现文件名很长，因此在 webpack.base.conf.js 中的 alias 下配置别名，这样就能直接使用 stylus 开头引入啦，记得加波浪线，因为在样式中引入别的样式要加这个表示后面的值为 alias，要到这里面去查找对应的路径。</li>
+</ol>
+<h2 id="Swiper-vue"><a href="#Swiper-vue" class="headerlink" title="Swiper.vue"></a>Swiper.vue</h2><p>第 2 部分借助第三方的轮播插件，vue-awesome-swiper，看文档即可。<br>代码结构如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">    &lt;swiper :options=&quot;swiperOption&quot;&gt;</span><br><span class="line">      &lt;swiper-slide &gt;</span><br><span class="line">        &lt;img class=&quot;swiper-img&quot; src=&quot;imgUrl&quot; /&gt;</span><br><span class="line">      &lt;/swiper-slide&gt;</span><br><span class="line">      &lt;div class=&quot;swiper-pagination&quot; slot=&quot;pagination&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/swiper&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>轮播的图片不止一张，所以我们在 data 中会定义一个数组 swiperList，来保存每张图片的 id 和 src 地址，然后使用列表循环 v-for 来展示它。<br>图片下面的小圆点则是靠把.swiper-pagination 传递给 swiperOption 来显示。</p>
+<h2 id="Icons-vue"><a href="#Icons-vue" class="headerlink" title="Icons.vue"></a>Icons.vue</h2><p>第 3 部分<br>页面的布局略过，重点在如何实现图标页面的拖动，也就是超过了 8 个图标后，可以出现新的一页，能进行滑动。<br>这里实现这个功能，也是借助第三方的插件 vue-awesome-swiper。<br>然后也是在 swiper-slide 上使用 v-for 循环渲染出每一页，然后在每个 div 上循环输出每一个图标。<br>而页数的控制主要是靠计算属性中的 pages 方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pages () &#123;</span><br><span class="line">      const pages = []</span><br><span class="line">      this.list.forEach((item, index) =&gt; &#123;</span><br><span class="line">        const page = Math.floor(index / 8)</span><br><span class="line">        if (!pages[page]) &#123;</span><br><span class="line">          pages[page] = []</span><br><span class="line">        &#125;</span><br><span class="line">        pages[page].push(item)</span><br><span class="line">      &#125;)</span><br><span class="line">      return pages</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Recommend-vue"><a href="#Recommend-vue" class="headerlink" title="Recommend.vue"></a>Recommend.vue</h2><p>第 4 部分，布局略过，这里的实现也是通过 v-for 列表循环输出。<br>这里需要注意的是，因为描述的文字字数很多，有的时候会超出，所以需要将超出的文字变成省略号隐藏起来，这里靠样式能够实现，但是有很多地方我们都需要用到这个样式，因此新建了一个 mixin.styl 的文件来存放，当我们需要的时候引入这个文件即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ellipsis()</span><br><span class="line">  overflow hidden</span><br><span class="line">  white-space nowrap</span><br><span class="line">  text-overflow ellipsis</span><br></pre></td></tr></table></figure>
+<h2 id="Weekend-vue"><a href="#Weekend-vue" class="headerlink" title="Weekend.vue"></a>Weekend.vue</h2><p>第 5 部分只是布局和数据与第 4 部分不同，实现思路和第 4 部分相似。</p>
+<p>这 5 个部分的数据最开始是写在每个组件的 data 之中，但是数据杂乱，不方便管理，这里把这些静态数据写成 json 文件，然后通过发送 ajax 请求来获取数据。</p>
+<p>这里使用第三方插件 axios 来获取，axios 返回的结果是一个 promise 对象。<br>这里需要在 config 的 index.js 文件中做一个转发配置，让文件去访问 api 下的文件时，自动解释去访问 mock 下的 index.json。<br>在 Home.vue 文件中的 methods 中代码如下，这样就可以拿到我们在首页需要的全部数据了，主要有以下几个，首页轮播图 swiperList，图标 iconList，推荐 recommendList，周末游 weekendList。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    getHomeInfo () &#123;</span><br><span class="line">      axios.get(&apos;/api/index.json?city=&apos; + this.city).then(this.getHomeInfoSucc)</span><br><span class="line">    &#125;,</span><br><span class="line">    getHomeInfoSucc (res) &#123;</span><br><span class="line">      res = res.data</span><br><span class="line">      if (res.ret &amp;&amp; res.data) &#123;</span><br><span class="line">        const data = res.data</span><br><span class="line">        this.swiperList = data.swiperList</span><br><span class="line">        this.iconList = data.iconList</span><br><span class="line">        this.recommendList = data.recommendList</span><br><span class="line">        this.weekendList = data.weekendList</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -423,7 +448,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/demo/" rel="tag"><i class="fa fa-tag"></i> demo</a>
+            <a href="/tags/project/" rel="tag"><i class="fa fa-tag"></i> project</a>
           
         </div>
       
@@ -436,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/11/100demos-1/" rel="next" title="100个小demo(一)">
-                <i class="fa fa-chevron-left"></i> 100个小demo(一)
+              <a href="/2018/09/12/100demos-2/" rel="next" title="100个小demo(二)">
+                <i class="fa fa-chevron-left"></i> 100个小demo(二)
               </a>
             
           </div>
@@ -446,8 +471,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/01/travel-01/" rel="prev" title="去哪儿项目总结（一）首页">
-                去哪儿项目总结（一）首页 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/05/travel-02/" rel="prev" title="去哪儿项目总结（二）城市列表页面">
+                去哪儿项目总结（二）城市列表页面 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,8 +525,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -581,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Header-vue"><span class="nav-number">1.</span> <span class="nav-text">Header.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swiper-vue"><span class="nav-number">2.</span> <span class="nav-text">Swiper.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Icons-vue"><span class="nav-number">3.</span> <span class="nav-text">Icons.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recommend-vue"><span class="nav-number">4.</span> <span class="nav-text">Recommend.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Weekend-vue"><span class="nav-number">5.</span> <span class="nav-text">Weekend.vue</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
