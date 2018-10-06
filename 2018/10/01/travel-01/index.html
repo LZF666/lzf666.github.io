@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://lzf666.github.io/2018/10/01/travel-01/travel/travel-01_LI.jpg">
 <meta property="og:image" content="https://lzf666.github.io/2018/10/01/travel-01/travel/travel-02.jpg">
-<meta property="og:updated_time" content="2018-10-05T12:00:47.836Z">
+<meta property="og:updated_time" content="2018-10-06T14:17:23.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="去哪儿项目总结（一）首页">
 <meta name="twitter:description" content="基于vue.js实现去哪儿页面，移动端">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,157字
+                  1,162字
                 </span>
               
 
@@ -404,33 +404,35 @@
       
 
       
-        <p>&emsp;&emsp;最近看了慕课网上的一个实战教程，把里面的代码认真动手敲了一遍，还是有蛮多的收获的，下面是我的一些个人总结，主要是一些大概的思路和部分关键知识点。<br>&emsp;&emsp;首页如下：<br><img src="/2018/10/01/travel-01/travel/travel-01_LI.jpg" alt="travel-01"><br><img src="/2018/10/01/travel-01/travel/travel-02.jpg" alt="travel-01"><br>我把它分为 5 个部分，第 1 部分是头部，第 2 部分是一个轮播图，可以左右滑动，第 3 部分是图标列表，第 4 部分是一个景点的展示列表，第 5 部分和第 5 部分类似，只是布局不同。<br>这 5 个部分分别作为子组件，最后在 Home.vue 中引用。</p>
-<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>第 1 部分主要是使用了 felx 布局，关键点有以下几个：</p>
+        <p>&emsp;&emsp;最近看了慕课网上的一个实战教程，把里面的代码认真动手敲了一遍，还是有蛮多的收获的，下面是我的一些个人总结，主要是一些大概的思路和部分关键知识点。<br>&emsp;&emsp;要实现的首页如下：<br><img src="/2018/10/01/travel-01/travel/travel-01_LI.jpg" alt="travel-01"><br><img src="/2018/10/01/travel-01/travel/travel-02.jpg" alt="travel-01"><br>&emsp;&emsp;分为 5 个部分，第 1 部分是头部；第 2 部分是一个轮播图，可以左右滑动；第 3 部分是图标列表；第 4 部分是一个景点的展示列表；第 5 部分和第 54 部分类似，只是布局不同。<br>&emsp;&emsp;这 5 个部分分别作为子组件，最后在 Home.vue 中引用。</p>
+<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>&emsp;&emsp;第 1 部分主要是使用了 felx 布局，关键点有以下几个：</p>
 <ol>
 <li>整个项目使用了 stylus，为了防止组件之间样式进行干扰，在 style 标签上添加了 scope 限制。<br>如下所示：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;stylus&quot; scoped&gt;</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li><p>图标主要是引入了 iconfont，这里不过多叙述，网上相关的资源很多，可以去看看是如何使用和引入的。</p>
+<li><p>图标主要是引入了 iconfont，这里不过多叙述，网上相关的资源很多，使用和引入都很简单。</p>
 </li>
-<li><p>在样式中，比如字体颜色，背景颜色等我们也会在其它组件中使用到，因此把这些常用的元素保存起来，需要的时候直接引用即可。<br>引用代码如下：</p>
+<li><p>在样式中，比如字体颜色，背景颜色等我们也会在其它组件中使用到，因此把这些常用的元素保存起来作为单独的变量，需要的时候直接引用即可。<br>引用代码如下：</p>
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@import &apos;~styles/varibles.styl&apos;</span><br><span class="line">.header</span><br><span class="line">  line-height $headerHeight</span><br><span class="line">  display flex</span><br><span class="line">  background-color $bgColor</span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li>在使用 import 引入 varibles.styl 文件时，我们发现文件名很长，因此在 webpack.base.conf.js 中的 alias 下配置别名，这样就能直接使用 stylus 开头引入啦，记得加波浪线，因为在样式中引入别的样式要加这个表示后面的值为 alias，要到这里面去查找对应的路径。</li>
+<li>在使用 import 引入 varibles.styl 文件时，我们发现文件名很长，因此在 webpack.base.conf.js 中的 alias 下配置别名，这样就能直接使用 stylus 开头引入啦，记得加波浪线，因为在样式中引入别的样式要加这个波浪线，表示后面的值为 alias，要到这里去查找对应的路径。</li>
 </ol>
-<h2 id="Swiper-vue"><a href="#Swiper-vue" class="headerlink" title="Swiper.vue"></a>Swiper.vue</h2><p>第 2 部分借助第三方的轮播插件，vue-awesome-swiper，看文档即可。<br>代码结构如下所示：</p>
+<h2 id="Swiper-vue"><a href="#Swiper-vue" class="headerlink" title="Swiper.vue"></a>Swiper.vue</h2><p>&emsp;&emsp;第 2 部分借助第三方的轮播插件，vue-awesome-swiper，看文档即可。<br>&emsp;&emsp;代码结构如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">    &lt;swiper :options=&quot;swiperOption&quot;&gt;</span><br><span class="line">      &lt;swiper-slide &gt;</span><br><span class="line">        &lt;img class=&quot;swiper-img&quot; src=&quot;imgUrl&quot; /&gt;</span><br><span class="line">      &lt;/swiper-slide&gt;</span><br><span class="line">      &lt;div class=&quot;swiper-pagination&quot; slot=&quot;pagination&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/swiper&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>轮播的图片不止一张，所以我们在 data 中会定义一个数组 swiperList，来保存每张图片的 id 和 src 地址，然后使用列表循环 v-for 来展示它。<br>图片下面的小圆点则是靠把.swiper-pagination 传递给 swiperOption 来显示。</p>
-<h2 id="Icons-vue"><a href="#Icons-vue" class="headerlink" title="Icons.vue"></a>Icons.vue</h2><p>第 3 部分<br>页面的布局略过，重点在如何实现图标页面的拖动，也就是超过了 8 个图标后，可以出现新的一页，能进行滑动。<br>这里实现这个功能，也是借助第三方的插件 vue-awesome-swiper。<br>然后也是在 swiper-slide 上使用 v-for 循环渲染出每一页，然后在每个 div 上循环输出每一个图标。<br>而页数的控制主要是靠计算属性中的 pages 方法。</p>
+<p>&emsp;&emsp;轮播的图片不止一张，所以在 data 中定义一个数组 swiperList，来保存每张图片的 id 和 src 地址，然后使用列表循环 v-for 来展示它。<br>图片下面的小圆点则是靠把.swiper-pagination 传递给 swiperOption 来显示。</p>
+<h2 id="Icons-vue"><a href="#Icons-vue" class="headerlink" title="Icons.vue"></a>Icons.vue</h2><p>&emsp;&emsp;第 3 部分<br>&emsp;&emsp;页面的布局略过，重点在如何实现图标页面的拖动，也就是超过了 8 个图标后，可以出现新的一页，能进行滑动。这里实现这个功能，也是借助第三方的插件 vue-awesome-swiper。然后也是在 swiper-slide 上使用 v-for 循环渲染出每一页，然后在每个 div 上循环输出每一个图标。<br>&emsp;&emsp;页数的控制主要是靠计算属性中的 pages 方法，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pages () &#123;</span><br><span class="line">      const pages = []</span><br><span class="line">      this.list.forEach((item, index) =&gt; &#123;</span><br><span class="line">        const page = Math.floor(index / 8)</span><br><span class="line">        if (!pages[page]) &#123;</span><br><span class="line">          pages[page] = []</span><br><span class="line">        &#125;</span><br><span class="line">        pages[page].push(item)</span><br><span class="line">      &#125;)</span><br><span class="line">      return pages</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Recommend-vue"><a href="#Recommend-vue" class="headerlink" title="Recommend.vue"></a>Recommend.vue</h2><p>第 4 部分，布局略过，这里的实现也是通过 v-for 列表循环输出。<br>这里需要注意的是，因为描述的文字字数很多，有的时候会超出，所以需要将超出的文字变成省略号隐藏起来，这里靠样式能够实现，但是有很多地方我们都需要用到这个样式，因此新建了一个 mixin.styl 的文件来存放，当我们需要的时候引入这个文件即可。</p>
+<h2 id="Recommend-vue"><a href="#Recommend-vue" class="headerlink" title="Recommend.vue"></a>Recommend.vue</h2><p>&emsp;&emsp;第 4 部分，布局略过，这里的实现也是通过 v-for 列表循环输出，需要注意的是，因为描述的文字字数很多，有的时候会超出，所以需要将超出的文字变成省略号隐藏起来，这里靠样式能够实现，但是有很多地方我们都需要用到这个样式，因此新建了一个 mixin.styl 的文件来存放，当我们需要的时候引入这个文件即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ellipsis()</span><br><span class="line">  overflow hidden</span><br><span class="line">  white-space nowrap</span><br><span class="line">  text-overflow ellipsis</span><br></pre></td></tr></table></figure>
-<h2 id="Weekend-vue"><a href="#Weekend-vue" class="headerlink" title="Weekend.vue"></a>Weekend.vue</h2><p>第 5 部分只是布局和数据与第 4 部分不同，实现思路和第 4 部分相似。</p>
-<p>这 5 个部分的数据最开始是写在每个组件的 data 之中，但是数据杂乱，不方便管理，这里把这些静态数据写成 json 文件，然后通过发送 ajax 请求来获取数据。</p>
-<p>这里使用第三方插件 axios 来获取，axios 返回的结果是一个 promise 对象。<br>这里需要在 config 的 index.js 文件中做一个转发配置，让文件去访问 api 下的文件时，自动解释去访问 mock 下的 index.json。<br>在 Home.vue 文件中的 methods 中代码如下，这样就可以拿到我们在首页需要的全部数据了，主要有以下几个，首页轮播图 swiperList，图标 iconList，推荐 recommendList，周末游 weekendList。</p>
+<h2 id="Weekend-vue"><a href="#Weekend-vue" class="headerlink" title="Weekend.vue"></a>Weekend.vue</h2><p>&emsp;&emsp;第 5 部分只是布局和数据与第 4 部分不同，实现思路和第 4 部分相似。</p>
+<hr>
+<p>&emsp;&emsp;这 5 个部分的数据最开始是写在每个组件的 data 之中，但是数据杂乱，不方便管理，这里把这些静态数据写成 json 文件，然后通过发送 ajax 请求来获取数据。</p>
+<p>&emsp;&emsp;这里使用第三方插件 axios 来获取，axios 返回的结果是一个 promise 对象。需要在 config 的 index.js 文件中做一个转发配置，让文件去访问 api 下的文件时，自动解释去访问 mock 下的 index.json。<br>&emsp;&emsp;这样就可以拿到我们在首页需要的全部数据了，主要有以下几个，首页轮播图 swiperList，图标 iconList，推荐 recommendList，周末游 weekendList，在 Home.vue 文件中的 methods 中代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    getHomeInfo () &#123;</span><br><span class="line">      axios.get(&apos;/api/index.json?city=&apos; + this.city).then(this.getHomeInfoSucc)</span><br><span class="line">    &#125;,</span><br><span class="line">    getHomeInfoSucc (res) &#123;</span><br><span class="line">      res = res.data</span><br><span class="line">      if (res.ret &amp;&amp; res.data) &#123;</span><br><span class="line">        const data = res.data</span><br><span class="line">        this.swiperList = data.swiperList</span><br><span class="line">        this.iconList = data.iconList</span><br><span class="line">        this.recommendList = data.recommendList</span><br><span class="line">        this.weekendList = data.weekendList</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/LZF666/travel" target="_blank" rel="noopener">项目地址</a></p>
 
       
     </div>
@@ -554,7 +556,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -662,7 +664,7 @@
   本站被<span id="busuanzi_value_site_uv"></span>个小天使访问过
 </span>
 <span class="post-meta-divider">|</span>
-博客全站共<span class="post-count">2.7k</span>字
+博客全站共<span class="post-count">3.5k</span>字
 
 
 

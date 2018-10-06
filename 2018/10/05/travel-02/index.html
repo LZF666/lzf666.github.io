@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://lzf666.github.io/2018/10/05/travel-02/travel/travel-03.jpg">
 <meta property="og:image" content="https://lzf666.github.io/2018/10/05/travel-02/travel/travel-04.jpg">
 <meta property="og:image" content="https://lzf666.github.io/2018/10/05/travel-02/travel/travel-05.jpg">
-<meta property="og:updated_time" content="2018-10-05T14:28:37.291Z">
+<meta property="og:updated_time" content="2018-10-06T14:17:11.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="去哪儿项目总结（二）城市列表页面">
 <meta name="twitter:description" content="基于vue.js实现去哪儿页面，移动端">
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  736字
+                  814字
                 </span>
               
 
@@ -405,17 +405,17 @@
       
 
       
-        <p>&emsp;&emsp;城市列表页如下<br><img src="/2018/10/05/travel-02/travel/travel-03.jpg" alt="travel-01"><br>在首页点击城市区域的时候需要跳转到城市列表页面，因此需要在 router 的 index.js 中配置跳转路由，然后把城市区域部分使用 router-link 包裹起来。</p>
-<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>这部分略过，布局很简单，返回的图标处，也是使用 router-link 标签包裹，跳转到根路径。</p>
-<h2 id="Search-vue"><a href="#Search-vue" class="headerlink" title="Search.vue"></a>Search.vue</h2><p>第 2 部分，这部分的布局很简单，但是要添加的是模糊查询功能，如图所示：<br><img src="/2018/10/05/travel-02/travel/travel-04.jpg" alt="travel-01"></p>
-<h2 id="List-vue"><a href="#List-vue" class="headerlink" title="List.vue"></a>List.vue</h2><p>第 3 部分，列表选择部分，可以再次简单地分为 3 个区域，但是没有必要分为 3 个组件，因为都是列表，所以写在一个文件中，分别是：当前城市，热门城市，按首字母大写分类。<br>重点是按首字母分类，这里为了能够上下拖动列表，使用第三方插件 better-scroll。<br>把最外层的 DOM 元素传递给 better-scroll 创建一个新的实例，代码如下：</p>
+        <p>&emsp;&emsp;城市列表页如下<br><img src="/2018/10/05/travel-02/travel/travel-03.jpg" alt="travel-01"><br>&emsp;&emsp;在首页点击城市区域的时候需要跳转到城市列表页面，因此需要在 router 的 index.js 中配置跳转路由，然后把城市区域部分使用 router-link 包裹起来。</p>
+<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>&emsp;&emsp;这部分略过，布局很简单，返回的图标处，也是使用 router-link 标签包裹，跳转到根路径。</p>
+<h2 id="Search-vue"><a href="#Search-vue" class="headerlink" title="Search.vue"></a>Search.vue</h2><p>&emsp;&emsp;第 2 部分，这部分的布局很简单，但是要添加的是模糊查询功能，如图所示：<br><img src="/2018/10/05/travel-02/travel/travel-04.jpg" alt="travel-01"><br>&emsp;&emsp;接收父组件 City.vue 传递过来的数据 cities，然后使用 v-model 进行双向绑定输入的数据 keyWord 值，监听它的的变化，将所有匹配到输入字符的数据放入到 list 数组中，并且使用节流函数提升性能，最后使用 v-for 循环展示出 list 的数据。<br>&emsp;&emsp;最后使用 better-scroll 添加上下滚动功能。</p>
+<h2 id="List-vue"><a href="#List-vue" class="headerlink" title="List.vue"></a>List.vue</h2><p>&emsp;&emsp;第 3 部分，列表选择部分，可以再次简单地分为 3 个区域，但是没有必要分为 3 个组件，因为都是列表，所以写在一个文件中，分别是：当前城市，热门城市，按首字母大写分类。<br>&emsp;&emsp;重点是按首字母分类，这里为了能够上下拖动列表，使用第三方插件 better-scroll，把最外层的 DOM 元素传递给 better-scroll 创建一个新的实例，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mounted () &#123;</span><br><span class="line">    this.scroll = new Bscroll(this.$refs.wrapper)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>通过 props 接收 City.vue 传递过来的 2 个数据，一个是热门城市 hot，一个是按首字母分类的列表 cities，然后使用 v-for 循环渲染出数据，其中 cities 是一个对象，需要做一个二次循环。</p>
-<h2 id="Alphabet-vue"><a href="#Alphabet-vue" class="headerlink" title="Alphabet.vue"></a>Alphabet.vue</h2><p>第 4 部分，通过绝对定位来将这部分固定到右侧，通过 props 接收 City.vue 传递过来的数据 cities，然后使用计算属性，将首字母提取到 letters 的空数组中，最后使用 v-for 循环输出。</p>
-<h2 id="City-vue"><a href="#City-vue" class="headerlink" title="City.vue"></a>City.vue</h2><p>主页面中同样使用 axios 来获取数据，然后把数据传递给子组件，这里是简单的父子组件之间的传值，子组件使用 props 接收。</p>
-<p>实现首字母和城市列表之间的联动：<br>原理：通过手指滑动列表的位置，来确定目前选择的是哪一个字母，然后将其值传递给 Alphabet.vue，使其上下滚动到对应的位置，这里的传值是兄弟之间的传值，但是因为他们有共同的父级，因此 Alphabet.vue 使用$emit 派发给父组件 City.vue，然后父组件接收，把值传递给 List.vue。<br>List.vue 接受到这个参数，然后使用 better-scroll 提供的 scrollToElement 方法自动滑动到对应的位置。<br><img src="/2018/10/05/travel-02/travel/travel-05.jpg" alt="travel-05"><br>具体代码如下：</p>
+<p>&emsp;&emsp;通过 props 接收 City.vue 传递过来的 2 个数据，一个是热门城市 hot，一个是按首字母分类的列表 cities，然后使用 v-for 循环渲染出数据，其中 cities 是一个对象，需要做一个二次循环。</p>
+<h2 id="Alphabet-vue"><a href="#Alphabet-vue" class="headerlink" title="Alphabet.vue"></a>Alphabet.vue</h2><p>&emsp;&emsp;第 4 部分，通过绝对定位来将这部分固定到右侧，通过 props 接收 City.vue 传递过来的数据 cities，然后使用计算属性，将首字母提取到 letters 的空数组中，最后使用 v-for 循环输出。</p>
+<h2 id="City-vue"><a href="#City-vue" class="headerlink" title="City.vue"></a>City.vue</h2><p>&emsp;&emsp;主页面中同样使用 axios 来获取数据，然后把数据传递给子组件，这里是简单的父子组件之间的传值，子组件使用 props 接收。</p>
+<h2 id="实现首字母和城市列表之间的联动："><a href="#实现首字母和城市列表之间的联动：" class="headerlink" title="实现首字母和城市列表之间的联动："></a>实现首字母和城市列表之间的联动：</h2><p>&emsp;&emsp;原理：通过手指滑动列表的位置，来确定目前选择的是哪一个字母，然后将其值传递给 Alphabet.vue，使其上下滚动到对应的位置，这里的传值是兄弟之间的传值，但是因为他们有共同的父级，因此 Alphabet.vue 使用$emit 派发给父组件 City.vue，然后父组件接收，把值传递给 List.vue。List.vue 接受到这个参数，然后使用 better-scroll 提供的 scrollToElement 方法自动滑动到对应的位置。<br><img src="/2018/10/05/travel-02/travel/travel-05.jpg" alt="travel-05"><br>&emsp;&emsp;具体代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 算出2的高度，也就是A距离顶部栏下边框的高度</span><br><span class="line"> this.startY = this.$refs[&apos;A&apos;][0].offsetTop</span><br><span class="line"> // 计算出手指到顶部栏下边框的高度，79是1的高度</span><br><span class="line"> const touchY = e.touches[0].clientY - 79</span><br><span class="line"> // 计算出是目前手指滑动到的字母的下标</span><br><span class="line">          const index = Math.floor((touchY - this.startY) / 20)</span><br><span class="line">          if (index &gt;= 0 &amp;&amp; index &lt; this.letters.length) &#123;</span><br><span class="line">            this.$emit(&apos;change&apos;, this.letters[index])</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
-<p>因为手指移动很快，在这里使用节流方式来提高性能，具体请看代码。</p>
+<p><a href="https://github.com/LZF666/travel" target="_blank" rel="noopener">项目地址</a></p>
 
       
     </div>
@@ -455,6 +455,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/06/travel-03/" rel="prev" title="去哪儿项目总结（三）vuex">
+                去哪儿项目总结（三）vuex <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -535,7 +539,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -606,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Header-vue"><span class="nav-number">1.</span> <span class="nav-text">Header.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-vue"><span class="nav-number">2.</span> <span class="nav-text">Search.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List-vue"><span class="nav-number">3.</span> <span class="nav-text">List.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alphabet-vue"><span class="nav-number">4.</span> <span class="nav-text">Alphabet.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#City-vue"><span class="nav-number">5.</span> <span class="nav-text">City.vue</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Header-vue"><span class="nav-number">1.</span> <span class="nav-text">Header.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-vue"><span class="nav-number">2.</span> <span class="nav-text">Search.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List-vue"><span class="nav-number">3.</span> <span class="nav-text">List.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alphabet-vue"><span class="nav-number">4.</span> <span class="nav-text">Alphabet.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#City-vue"><span class="nav-number">5.</span> <span class="nav-text">City.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现首字母和城市列表之间的联动："><span class="nav-number">6.</span> <span class="nav-text">实现首字母和城市列表之间的联动：</span></a></li></ol></div>
             
 
           </div>
@@ -643,7 +647,7 @@
   本站被<span id="busuanzi_value_site_uv"></span>个小天使访问过
 </span>
 <span class="post-meta-divider">|</span>
-博客全站共<span class="post-count">2.7k</span>字
+博客全站共<span class="post-count">3.5k</span>字
 
 
 
