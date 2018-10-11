@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="大斧子">
 <meta property="og:description" content="基于vue.js实现去哪儿页面，移动端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://lzf666.github.io/2018/10/06/travel-04/travel/travel-07.jpg">
+<meta property="og:image" content="http://s10.sinaimg.cn/middle/006fVMQYzy7ojCjUtGV49&690">
 <meta property="og:image" content="https://lzf666.github.io/2018/10/06/travel-04/travel/travel-08.jpg">
-<meta property="og:updated_time" content="2018-10-06T14:21:51.874Z">
+<meta property="og:updated_time" content="2018-10-11T08:15:19.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="去哪儿项目总结（四）详情页面">
 <meta name="twitter:description" content="基于vue.js实现去哪儿页面，移动端">
-<meta name="twitter:image" content="https://lzf666.github.io/2018/10/06/travel-04/travel/travel-07.jpg">
+<meta name="twitter:image" content="http://s10.sinaimg.cn/middle/006fVMQYzy7ojCjUtGV49&690">
 
 
 
@@ -404,7 +404,7 @@
       
 
       
-        <p>&emsp;&emsp;详情页面如下：<br><img src="/2018/10/06/travel-04/travel/travel-07.jpg" alt="travel-01"></p>
+        <p>&emsp;&emsp;详情页面如下：<br><img src="http://s10.sinaimg.cn/middle/006fVMQYzy7ojCjUtGV49&amp;690" alt="travel-01"></p>
 <h2 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h2><p>&emsp;&emsp;当用户点击不同的景点会得到不同的景点的信息，因此跳转到的页面也是不尽相同的，所以需要进行动态路由绑定，也就是<code>:to=&quot;&#39;/detail/&#39;+item.id&quot;</code>，然后到 router 文件夹中进行路由配置，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path: &apos;/detail/:id&apos;,</span><br><span class="line">  name: &apos;Detail&apos;,</span><br><span class="line">  component: () =&gt;</span><br><span class="line">      import(&apos;@/pages/detail/Detail&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;详情页面分为 3 个部分：<br>&emsp;&emsp;第 1 部分：顶部点击可以显示出画廊，可以左右滑动展示多张图片，因为画廊组件可能会在其他地方也用到，因此这是一个公用组件。<br>&emsp;&emsp;第 2 部分：是景点的具体信息，这里的布局和逻辑都较为简单，这部分略过<br>&emsp;&emsp;第 3 部分：这里用递归实现了一个二级列表。</p>
@@ -451,6 +451,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/11/travel/" rel="prev" title="travel">
+                travel <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -531,7 +535,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
