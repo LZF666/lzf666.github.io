@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="project," />
+  <meta name="keywords" content="跨域," />
 
 
 
@@ -79,22 +79,18 @@
 
 
 
-<meta name="description" content="基于vue.js实现去哪儿页面，移动端">
-<meta name="keywords" content="project">
+<meta name="description" content="什么是跨域？ 为什么要实现跨域?   跨域有几种实现方式？">
+<meta name="keywords" content="跨域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="去哪儿项目总结（二）城市列表页面">
-<meta property="og:url" content="https://lzf666.github.io/2018/10/05/travel-02/index.html">
+<meta property="og:title" content="怎样实现跨域">
+<meta property="og:url" content="https://lzf666.github.io/2018/10/21/跨域/index.html">
 <meta property="og:site_name" content="大斧子">
-<meta property="og:description" content="基于vue.js实现去哪儿页面，移动端">
+<meta property="og:description" content="什么是跨域？ 为什么要实现跨域?   跨域有几种实现方式？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://s2.sinaimg.cn/middle/006fVMQYzy7ojCjxGM171&690">
-<meta property="og:image" content="http://s1.sinaimg.cn/middle/006fVMQYzy7ojCjxrnG50&690">
-<meta property="og:image" content="http://s15.sinaimg.cn/middle/006fVMQYzy7ojCjEpOu8e&690">
-<meta property="og:updated_time" content="2018-10-11T07:49:34.761Z">
+<meta property="og:updated_time" content="2018-10-21T14:54:29.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="去哪儿项目总结（二）城市列表页面">
-<meta name="twitter:description" content="基于vue.js实现去哪儿页面，移动端">
-<meta name="twitter:image" content="http://s2.sinaimg.cn/middle/006fVMQYzy7ojCjxGM171&690">
+<meta name="twitter:title" content="怎样实现跨域">
+<meta name="twitter:description" content="什么是跨域？ 为什么要实现跨域?   跨域有几种实现方式？">
 
 
 
@@ -124,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://lzf666.github.io/2018/10/05/travel-02/"/>
+  <link rel="canonical" href="https://lzf666.github.io/2018/10/21/跨域/"/>
 
 
 
 
 
-  <title>去哪儿项目总结（二）城市列表页面 | 大斧子</title>
+  <title>怎样实现跨域 | 大斧子</title>
   
 
 
@@ -279,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/05/travel-02/">
+    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/21/跨域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuzifu">
@@ -296,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">去哪儿项目总结（二）城市列表页面</h1>
+          <h1 class="post-title" itemprop="name headline">怎样实现跨域</h1>
         
 
         <div class="post-meta">
@@ -308,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T20:00:10+08:00">
-                2018-10-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T16:33:15+08:00">
+                2018-10-21
               </time>
             
 
@@ -318,28 +314,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -364,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  814字
+                  1,173字
                 </span>
               
 
@@ -380,7 +354,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  4分钟
                 </span>
               
             </div>
@@ -388,7 +362,7 @@
 
           
               <div class="post-description">
-                  基于vue.js实现去哪儿页面，移动端
+                  什么是跨域？ 为什么要实现跨域?   跨域有几种实现方式？
               </div>
           
 
@@ -405,17 +379,18 @@
       
 
       
-        <p>&emsp;&emsp;城市列表页如下<br><img src="http://s2.sinaimg.cn/middle/006fVMQYzy7ojCjxGM171&amp;690" alt="travel-03"><br>&emsp;&emsp;在首页点击城市区域的时候需要跳转到城市列表页面，因此需要在 router 的 index.js 中配置跳转路由，然后把城市区域部分使用 router-link 包裹起来。</p>
-<h2 id="Header-vue"><a href="#Header-vue" class="headerlink" title="Header.vue"></a>Header.vue</h2><p>&emsp;&emsp;这部分略过，布局很简单，返回的图标处，也是使用 router-link 标签包裹，跳转到根路径。</p>
-<h2 id="Search-vue"><a href="#Search-vue" class="headerlink" title="Search.vue"></a>Search.vue</h2><p>&emsp;&emsp;第 2 部分，这部分的布局很简单，但是要添加的是模糊查询功能，如图所示：<br><img src="http://s1.sinaimg.cn/middle/006fVMQYzy7ojCjxrnG50&amp;690" alt="travel-04"><br>&emsp;&emsp;接收父组件 City.vue 传递过来的数据 cities，然后使用 v-model 进行双向绑定输入的数据 keyWord 值，监听它的的变化，将所有匹配到输入字符的数据放入到 list 数组中，并且使用节流函数提升性能，最后使用 v-for 循环展示出 list 的数据。<br>&emsp;&emsp;最后使用 better-scroll 添加上下滚动功能。</p>
-<h2 id="List-vue"><a href="#List-vue" class="headerlink" title="List.vue"></a>List.vue</h2><p>&emsp;&emsp;第 3 部分，列表选择部分，可以再次简单地分为 3 个区域，但是没有必要分为 3 个组件，因为都是列表，所以写在一个文件中，分别是：当前城市，热门城市，按首字母大写分类。<br>&emsp;&emsp;重点是按首字母分类，这里为了能够上下拖动列表，使用第三方插件 better-scroll，把最外层的 DOM 元素传递给 better-scroll 创建一个新的实例，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mounted () &#123;</span><br><span class="line">    this.scroll = new Bscroll(this.$refs.wrapper)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;通过 props 接收 City.vue 传递过来的 2 个数据，一个是热门城市 hot，一个是按首字母分类的列表 cities，然后使用 v-for 循环渲染出数据，其中 cities 是一个对象，需要做一个二次循环。</p>
-<h2 id="Alphabet-vue"><a href="#Alphabet-vue" class="headerlink" title="Alphabet.vue"></a>Alphabet.vue</h2><p>&emsp;&emsp;第 4 部分，通过绝对定位来将这部分固定到右侧，通过 props 接收 City.vue 传递过来的数据 cities，然后使用计算属性，将首字母提取到 letters 的空数组中，最后使用 v-for 循环输出。</p>
-<h2 id="City-vue"><a href="#City-vue" class="headerlink" title="City.vue"></a>City.vue</h2><p>&emsp;&emsp;主页面中同样使用 axios 来获取数据，然后把数据传递给子组件，这里是简单的父子组件之间的传值，子组件使用 props 接收。</p>
-<h2 id="实现首字母和城市列表之间的联动："><a href="#实现首字母和城市列表之间的联动：" class="headerlink" title="实现首字母和城市列表之间的联动："></a>实现首字母和城市列表之间的联动：</h2><p>&emsp;&emsp;原理：通过手指滑动列表的位置，来确定目前选择的是哪一个字母，然后将其值传递给 Alphabet.vue，使其上下滚动到对应的位置，这里的传值是兄弟之间的传值，但是因为他们有共同的父级，因此 Alphabet.vue 使用$emit 派发给父组件 City.vue，然后父组件接收，把值传递给 List.vue。List.vue 接受到这个参数，然后使用 better-scroll 提供的 scrollToElement 方法自动滑动到对应的位置。<br><img src="http://s15.sinaimg.cn/middle/006fVMQYzy7ojCjEpOu8e&amp;690" alt="travel-05"><br>&emsp;&emsp;具体代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 算出2的高度，也就是A距离顶部栏下边框的高度</span><br><span class="line"> this.startY = this.$refs[&apos;A&apos;][0].offsetTop</span><br><span class="line"> // 计算出手指到顶部栏下边框的高度，79是1的高度</span><br><span class="line"> const touchY = e.touches[0].clientY - 79</span><br><span class="line"> // 计算出是目前手指滑动到的字母的下标</span><br><span class="line">          const index = Math.floor((touchY - this.startY) / 20)</span><br><span class="line">          if (index &gt;= 0 &amp;&amp; index &lt; this.letters.length) &#123;</span><br><span class="line">            this.$emit(&apos;change&apos;, this.letters[index])</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/LZF666/travel" target="_blank" rel="noopener">项目地址</a></p>
+        <p>遇见一个问题先从三个方向下手，是什么，有什么用，怎么用</p>
+<h1 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h1><p>浏览器处于安全方面的考虑，只允许与本域下的接口进行交互，不同源的客户端脚本在未明确授权的情况下不能读写对方的资源。这就是浏览器的同源保护策略。<br>同源指的是：同协议，同域名和同端口，必须三者同时满足才行。<br>同源策略是属于浏览器的，也正是因为如此，浏览器会自动拦截不同源的信息，因为会认为它是不安全的。<br>突破同源策略的限制，允许不同域的接口进行交互就叫做跨域。</p>
+<h1 id="为什么要实现跨域？"><a href="#为什么要实现跨域？" class="headerlink" title="为什么要实现跨域？"></a>为什么要实现跨域？</h1><p>实现跨域是为了获取到其它域下的资源，比如我在自己的网站下去获取一张百度图片，其实就是在跨域。</p>
+<h1 id="跨域有几种实现方式？"><a href="#跨域有几种实现方式？" class="headerlink" title="跨域有几种实现方式？"></a>跨域有几种实现方式？</h1><h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>HTML 中 script 标签可以加载其它域下的 js，我们可以利用这个特性从其它域下获取数据。<br>但问题是我们获取到的这个数据是 JSON 格式的数据，相当于直接放在控制台运行，我们无法对数据进行操作，因此，需要对应接口后端的配合。<br>所以服务器需收到请求后，需要将数据放在一个指定名字的回调函数里传回来。<br>比如：<br>前端在发送请求的时候，添加一个名为 callback 的参数，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://api.baidu.com/weather.php?callback=showdata&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这个请求到后端后，后端会去检查是否有 callback 这样一个参数，如果有的话，在将数据返回来之前做一些处理。<br>如之前后端返回的数据格式为：<br>{“city”: “hangzhou”,”weather”:”晴天”}<br>现在经过处理后返回数据：<br>showdata({“city”: “hangzhou”,”weather”:”晴天”})<br>这样浏览器收到这样的数据，把它作为 js 来执行，相当于调用了 showdata 这个函数，我们只需要在之前定义好 showdata 这个全局函数，在函数内部即可处理这些返回的数据。<br>我们只需要在之前定义好 showdata 这个全局函数，在函数内部即可处理这些返回的数据。</p>
+<h2 id="CORS：跨域资源共享"><a href="#CORS：跨域资源共享" class="headerlink" title="CORS：跨域资源共享"></a>CORS：跨域资源共享</h2><p>CORS 全称是跨域资源共享（Cross-Origin Resource Sharing），是一种 ajax 跨域请求资源的方式，支持现代浏览器，IE 支持 10 以上。<br>CORS 全称是跨域资源共享（Cross-Origin Resource Sharing），是一种 ajax 跨域请求资源的方式，支持现代浏览器，IE 支持 10 以上。<br>实现方式很简单，当你使用 XMLHttpRequest 发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：Access-Control-Allow-Origin; 浏览器判断该相应头中是否包含 Origin 的值，如果有则浏览器会处理响应，我们就可以拿到响应数据，如果不包含浏览器直接驳回，这时我们无法拿到响应数据。所以 CORS 的表象是让你觉得它与同源的 ajax 请求没啥区别，代码完全一样。<br>服务端需要在响应头上添加一行：<br>res.setHeader(‘Access-Control-Allow-Origin’,’<a href="http://localhost:8080&#39;" target="_blank" rel="noopener">http://localhost:8080&#39;</a>)</p>
+<h2 id="降域"><a href="#降域" class="headerlink" title="降域"></a>降域</h2><p>这种办法只能解决主域相同而子域不同，且是 iframe 形式的跨域；比如：<br>两个页面，如分别为 a.miao.com 和 b.miao.com，可以使用降域的方式来进行跨域，分别在两个页面的 js 文件中写上 document.domain = ‘miao.com’ 即可。保持主页面和嵌套的页面的后缀一致。</p>
+<h2 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h2><p>降域的一个改进，使得即使是在两个不同的域的页面，也可以进行数据的交互，<br>这是 HTML5 中提供的属性，一般适合在同一父级目录下的两个页面进行数据的传输<br>如 a，b 两个页面，b 页面通过 iframe 标签显示在 a 页面内。<br>例如在 a 页面中写出如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    $event.addEventListener(&apos;input&apos;,function()&#123;</span><br><span class="line">    window.frames[0].postMessage(this.value.&apos;*&apos;);</span><br><span class="line">&#125;)</span><br><span class="line">//a页面向要嵌套的b页面发送一个message，‘*’表示在任何域下都可以接受</span><br></pre></td></tr></table></figure>
+<p>然后在 b 页面中写出如下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;message&apos;,function(e) &#123;     console.log(e.data); &#125;);</span><br><span class="line">//在b页面监听message事件，当有这个事件出现，表示有页面嵌套了这个页面，然后可以去处理这个事件，返回对应的数据</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -433,7 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/project/" rel="tag"><i class="fa fa-tag"></i> project</a>
+            <a href="/tags/跨域/" rel="tag"><i class="fa fa-tag"></i> 跨域</a>
           
         </div>
       
@@ -446,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/01/travel-01/" rel="next" title="去哪儿项目总结（一）首页">
-                <i class="fa fa-chevron-left"></i> 去哪儿项目总结（一）首页
+              <a href="/2018/10/21/数组去重/" rel="next" title="数组去重的6种方法">
+                <i class="fa fa-chevron-left"></i> 数组去重的6种方法
               </a>
             
           </div>
@@ -455,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/06/travel-03/" rel="prev" title="去哪儿项目总结（三）vuex">
-                去哪儿项目总结（三）vuex <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -610,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Header-vue"><span class="nav-number">1.</span> <span class="nav-text">Header.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-vue"><span class="nav-number">2.</span> <span class="nav-text">Search.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List-vue"><span class="nav-number">3.</span> <span class="nav-text">List.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alphabet-vue"><span class="nav-number">4.</span> <span class="nav-text">Alphabet.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#City-vue"><span class="nav-number">5.</span> <span class="nav-text">City.vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现首字母和城市列表之间的联动："><span class="nav-number">6.</span> <span class="nav-text">实现首字母和城市列表之间的联动：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是跨域？"><span class="nav-number">1.</span> <span class="nav-text">什么是跨域？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要实现跨域？"><span class="nav-number">2.</span> <span class="nav-text">为什么要实现跨域？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跨域有几种实现方式？"><span class="nav-number">3.</span> <span class="nav-text">跨域有几种实现方式？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSONP"><span class="nav-number">3.1.</span> <span class="nav-text">JSONP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CORS：跨域资源共享"><span class="nav-number">3.2.</span> <span class="nav-text">CORS：跨域资源共享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#降域"><span class="nav-number">3.3.</span> <span class="nav-text">降域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#postMessage"><span class="nav-number">3.4.</span> <span class="nav-text">postMessage</span></a></li></ol></li></ol></div>
             
 
           </div>
