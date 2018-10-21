@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面试题," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTML,CSS,JS,Vue">
+<meta name="keywords" content="面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一份面试题">
+<meta property="og:url" content="https://lzf666.github.io/2018/10/21/interview1/index.html">
+<meta property="og:site_name" content="大斧子">
+<meta property="og:description" content="HTML,CSS,JS,Vue">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-21T04:13:31.244Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一份面试题">
+<meta name="twitter:description" content="HTML,CSS,JS,Vue">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lzf666.github.io/2018/10/21/interview1/"/>
+
+
+
+
+
+  <title>第一份面试题 | 大斧子</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+    <a href="https://github.com/LZF666" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    </div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大斧子</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">今天依旧脑洞清奇！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-folder-o"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-project">
+          <a href="/project" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            作品集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/21/interview1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuzifu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大斧子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">第一份面试题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T11:45:24+08:00">
+                2018-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,719字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  HTML,CSS,JS,Vue
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="button-标签是块级元素还是内联元素？inline-block-的概念是什么？"><a href="#button-标签是块级元素还是内联元素？inline-block-的概念是什么？" class="headerlink" title="button 标签是块级元素还是内联元素？inline-block 的概念是什么？"></a>button 标签是块级元素还是内联元素？inline-block 的概念是什么？</h1><p>button 是 inline-block 元素；<br>inline-block 的概念：<br>块级对象元素会单独占一行显示，并且可以设置 width,height 属性<br>内联对象元素前后不会产生换行，一系列 inline 元素都在一行内显示，直到该行排满，对 inline 元素设置 width,height 属性无效<br>既希望元素具有宽度高度特性，又具有同行特性，这个时候我们可以使用 inline-block。<br>display:inline-block 旁边的内联对象会被呈递在同一行内，允许空格。</p>
+<p>【扩展】<br><strong>块级元素的特点：</strong></p>
+<ul>
+<li>block 元素会独占一行，多个 block 元素会各自新起一行。默认情况下，block 元素宽度自动填满其父元素宽度。</li>
+<li>block 元素可以设置 width,height 属性。块级元素即使设置了宽度,仍然是独占一行。</li>
+<li>block 元素可以设置 margin 和 padding 属性。</li>
+<li>常用块级元素：<br>address - 地址<br>blockquote - 块引用<br>center - 举中对齐块<br>dir - 目录列表<br>div - 常用块级容易，也是 css layout 的主要标签<br>dl - 定义列表<br>fieldset - form 控制组<br>form - 交互表单<br>h1 - 大标题<br>h2 - 副标题<br>h3 - 3 级标题<br>h4 - 4 级标题<br>h5 - 5 级标题<br>h6 - 6 级标题<br>hr - 水平分隔线<br>isindex - input prompt<br>menu - 菜单列表<br>noframes - frames 可选内容（对于不支持 frame 的浏览器显示此区块内容）<br>noscript - 可选脚本内容（对于不支持 script 的浏览器显示此内容）<br>ol - 排序列表<br>p - 段落<br>pre - 格式化文本<br>table - 表格<br>ul - 非排序列表</li>
+</ul>
+<p><strong>内联元素的特点：</strong></p>
+<ul>
+<li>inline 元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
+<li>inline 元素设置 width,height 属性无效。</li>
+<li>inline 元素的 margin 和 padding 属性，水平方向的 padding-left, padding-right, margin-left, margin-right 都产生边距效果；但竖直方向的 padding-top, padding-bottom, margin-top, margin-bottom 不会产生边距效果。</li>
+<li>常用内联元素：<br>a - 锚点<br>abbr - 缩写<br>acronym - 首字<br>b - 粗体（不推荐）<br>bdo - bidi override<br>big - 大字体<br>br - 换行<br>cite - 引用<br>code - 计算机代码（在引用源码的时候需要）<br>dfn - 定义字段<br>em - 强调<br>font - 字体设定（不推荐）<br>i - 斜体<br>img - 图片<br>input - 输入框<br>kbd - 定义键盘文本<br>label - 表格标签<br>q - 短引用<br>s - 中划线（不推荐）<br>samp - 定义范例计算机代码<br>select - 项目选择<br>small - 小字体文本<br>span - 常用内联容器，定义文本内区块<br>strike - 中划线<br>strong - 粗体强调<br>sub - 下标<br>sup - 上标<br>textarea - 多行文本输入框<br>tt - 电传文本<br>u - 下划线<br>var - 定义变量</li>
+</ul>
+<p>【扩展 2】<br><strong>img、input 到底是行内还是块级元素？</strong><br>img 是行内元素，但同时它也是行内替换元素，行内替换元素就是会根据标签属性来显示的元素。<br>比如 img 根据 src 属性来显示，input 根据 value 属性来显示，因此可知道 img 和 input 是行内替换元素。<br>特点：height/width/padding/margin 均可用。效果等于块元素。例如 img、input、textarea、select 都是替换元素，例如 input,设置上下 padding，可以撑大父元素。<br>行内非替换元素，例如 strong, 设置上下 padding，只是范围扩大，可是无法撑大父元素，不会影响 line-height;</p>
+<h1 id="positon-属性值有哪些？"><a href="#positon-属性值有哪些？" class="headerlink" title="positon 属性值有哪些？"></a>positon 属性值有哪些？</h1><p>position 的属性值共有四个常用的：static、relative、absolute、fixed。</p>
+<ul>
+<li>Static<br>所有元素在默认的情况下 position 属性均为 static。</li>
+<li>Relative<br>relative 定位，又称为相对定位，相对定位相对的是它原本在文档流中的位置而进行偏移，没有脱离文档流，top 等属性值不影响后面的元素，而添加 margin，占据文档空间，会影响后面的元素，得往后移动。</li>
+<li>Absolute<br>absolute 定位，也称为绝对定位，使用 absolut 定位的元素脱离文档流后，就只能根据祖先类元素(父类以上)进行定位，这个祖先类还必须是以 position 非 static 方式定位，直到 html 根元素为止。注意：祖先类的 margin 会让子类的 absolute 跟着偏移，而 padding 却不会让使用了 absolute 发生了偏移。</li>
+<li>Fixed<br>fixed 和 absolute 有很多共同点： 1.会改变行内元素的呈现模式，使 display 变更为 block。 2.会让元素脱离文档流，不占据空间。 3.默认会覆盖到非定位元素上。<br>absolute 的”根元素“是可以被设置的，而 fixed 则其”根元素“固定为浏览器窗口。</li>
+</ul>
+<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>W3C 标准盒模型：width=content，总宽度：width+padding+margin<br>IE 盒模型：width=content+padding+border，总宽度：width+margin<br>准确来说，是问盒模型的计算方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">box-sizing:</span><br><span class="line">    content-box(标准盒模型，默认)</span><br><span class="line">    border-box(IE盒模型)</span><br></pre></td></tr></table></figure>
+<p>background 系列属性的边界： padding-box；</p>
+<h1 id="什么是媒体查询"><a href="#什么是媒体查询" class="headerlink" title="什么是媒体查询"></a>什么是媒体查询</h1><p>媒体查询可以让我们根据不同设备显示器(视口宽度、屏幕比例，设备方向：横向或者纵向)为其设定不同的 CSS 样式，可以让一套代码适用多种设备，达到响应式的目的。<br>写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@media screen and（min-width:280px) and (max-width: 320px) &#123;</span><br><span class="line">  body &#123;</span><br><span class="line">    background-color: lightblue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (max-width: 720px) &#123;</span><br><span class="line">  body &#123;</span><br><span class="line">    background-color: lightblue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="有几种-css-选择器，优先级是什么？"><a href="#有几种-css-选择器，优先级是什么？" class="headerlink" title="有几种 css 选择器，优先级是什么？"></a>有几种 css 选择器，优先级是什么？</h1><p>id 选择器： #id<br>类选择器： .class<br>伪类选择器：a:link<br>属性选择器：input[type=text]<br>标签选择器: p{}<br>伪元素:p:before<br>通用选择器：*<br>优先级：计算权重，权重越高，优先级越高<br>权重公式：【a,b,c,d】<br>a——行内样式<br>b——id 选择器<br>c——类，伪类，属性选择器<br>d——标签，伪元素<br>!important 优先级最高</p>
+<h1 id="什么是浮动，如何清除浮动？"><a href="#什么是浮动，如何清除浮动？" class="headerlink" title="什么是浮动，如何清除浮动？"></a>什么是浮动，如何清除浮动？</h1><p>浮动：元素会脱离文档流，根据设定的值向左或者向右偏移，直到碰见了父元素的边界或者另一个浮动元素的边框。<br>对于父元素来说，如果它的子元素全都是浮动元素，而父元素自身没有定义高度的话，那么它会失去高度。<br>对于普通元素来说，它感知不到浮动元素的存在，如果宽高合适的话，会占据浮动元素原有的位置。<br>对于文字来说，能感知到它的存在，会围绕浮动元素分布。<br>清除浮动就是清除浮动元素带来的不利的影响，清除浮动的三种方式：</p>
+<ol>
+<li>在父元素的子元素后面添加一个空的 div，然后在上面设置 clear:both。</li>
+<li>使用伪元素，:after，设置 clear:both 来清除浮动。</li>
+<li>利用 BFC，创建一个独立的不干扰其它元素的块级上下文。<br>以下元素可以触发 BFC：<br>overflow:不为 visible 默认值，比如说是 hidden<br>float 属性不为 none<br>position 值为 absolute 或者 fixed</li>
+</ol>
+<h1 id="CSS-有哪些垂直居中方案"><a href="#CSS-有哪些垂直居中方案" class="headerlink" title="CSS 有哪些垂直居中方案"></a>CSS 有哪些垂直居中方案</h1><p>6 种垂直居中：</p>
+<ol>
+<li>flex 布局<br>父元素固定高度，写以下三个属性</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display:flex;</span><br><span class="line">justify-content:center;</span><br><span class="line">align-items:center;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>absolute margin auto<br>父元素相对定位并具有固定高度，子元素绝对定位，具有高度，且 top 等值全部为 0，设置 margin:auto;即可</li>
+<li>absolute translate-50%<br>父元素相对定位并具有固定高度，子元素绝对定位，有自身高度和宽度，并且 top，left 都为 50%，transform:translate(-50%,-50%)<br>因为是以左上角为准的。</li>
+<li>absolute margin 负值<br>同方法 3 类似，父元素固定高度，子元素都固定宽高但是是不再使用 translate，而是使用 margin-left：负自身宽度的一半,margin-top:负自身高度的一半。</li>
+<li>div 伪装成 table<br>父元素固定高度，display:table<br>下面还有一个 div 伪装为 td,display:table-row，再次嵌套一个 div 伪装成 td 元素：display:table-cell</li>
+<li>inline-block 大法<br>父元素固定高度，子元素有宽度，无高度，display:inline-block,vertical-alian:middle。</li>
+</ol>
+<p>子元素前后皆加上伪元素，伪元素高度 100%，display:inline-block,vertical-alian:middle。</p>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>推荐阅读《JavaScript 正则表达式迷你书》</p>
+<p>死记硬背大法：记住常用的就行了，多了不如去查，</p>
+<h1 id="说一下-less-或者-sass-中你喜欢的语法"><a href="#说一下-less-或者-sass-中你喜欢的语法" class="headerlink" title="说一下 less 或者 sass 中你喜欢的语法"></a>说一下 less 或者 sass 中你喜欢的语法</h1><p><a href="https://www.oschina.net/question/12_44255" target="_blank" rel="noopener">参考文章：</a><br>less 和 sass 都是 css 预处理器<br>使用过 less 和 stylus，没用过 sass，sass 基于 ruby 的环境，因此安装之前还要安装 ruby，而 less 是基于 js 的，stylus 基于 Node 的。<br>喜欢的地方有：</p>
+<ul>
+<li><p>变量：<br>less 的变量使用@符号开始，stylus 没有限定，可以是$，也可以任意的其它字符，但是不要使用@开头</p>
+</li>
+<li><p>嵌套<br>层级嵌套都差不多，只是 stylus 可以不用写花括号和冒号</p>
+</li>
+<li><p>混入 mixin<br>定义一些可以传递参数的代码片段，方便日后根据需求调用。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stylus</span><br><span class="line"></span><br><span class="line">error(borderWidth= 2px) &#123;</span><br><span class="line">  border: borderWidth solid #F00;</span><br><span class="line">  color: #F00;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">less</span><br><span class="line"></span><br><span class="line">.error(@borderWidth: 2px) &#123;</span><br><span class="line">  border: @borderWidth solid #F00;</span><br><span class="line">  color: #F00;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>继承<br>stylus @extend .block<br>less 稍微弱一点，更像是混入, .block;</p>
+</li>
+<li><p>颜色函数，变暗，调亮，颜色梯度</p>
+</li>
+</ul>
+<h1 id="输入时间戳，输出-yyyy-mm-dd-hh-mm-ss-格式的字符串"><a href="#输入时间戳，输出-yyyy-mm-dd-hh-mm-ss-格式的字符串" class="headerlink" title="输入时间戳，输出 yyyy-mm-dd hh:mm:ss 格式的字符串"></a>输入时间戳，输出 yyyy-mm-dd hh:mm:ss 格式的字符串</h1><p>将 yyyy-mm-dd hh:mm:ss 转换为时间戳</p>
+<pre><code>var  ddate = new Date(&apos;2014-05-10&apos;).getTime();
+</code></pre><p>new Date 原型上有一串函数，可以将时间戳转换为字符，比如<code>toLocaleString()</code><br>自己手写的话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function formatDateTime(timeStamp) &#123;</span><br><span class="line">    var date = new Date();</span><br><span class="line">    console.log(date.setTime(timeStamp));</span><br><span class="line">    var y = date.getFullYear();</span><br><span class="line">    var m = date.getMonth() + 1;</span><br><span class="line">    m = m &lt; 10 ? (&apos;0&apos; + m) : m;</span><br><span class="line">    var d = date.getDate();</span><br><span class="line">    d = d &lt; 10 ? (&apos;0&apos; + d) : d;</span><br><span class="line">    var h = date.getHours();</span><br><span class="line">    h = h &lt; 10 ? (&apos;0&apos; + h) : h;</span><br><span class="line">    var minute = date.getMinutes();</span><br><span class="line">    var second = date.getSeconds();</span><br><span class="line">    minute = minute &lt; 10 ? (&apos;0&apos; + minute) : minute;</span><br><span class="line">    second = second &lt; 10 ? (&apos;0&apos; + second) : second;</span><br><span class="line">    return y + &apos;-&apos; + m + &apos;-&apos; + d+&apos; &apos;+h+&apos;:&apos;+minute+&apos;:&apos;+second;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(formatDateTime(1495157126));</span><br></pre></td></tr></table></figure>
+<h1 id="Vue-中，-nextTick-是什么，一般用于什么场景？"><a href="#Vue-中，-nextTick-是什么，一般用于什么场景？" class="headerlink" title="Vue 中，$nextTick 是什么，一般用于什么场景？"></a>Vue 中，$nextTick 是什么，一般用于什么场景？</h1><p>Vue 中的 nextTick 涉及到 Vue 中 DOM 的异步更新。<br>在 Vue 生命周期的 created()钩子函数进行的 DOM 操作一定要放在 Vue.nextTick()的回调函数中。<br>在 created()钩子函数执行的时候 DOM 其实并未进行任何渲染，而此时进行 DOM 操作无异于徒劳，所以此处一定要将 DOM 操作的 js 代码放进 Vue.nextTick()的回调函数中。与之对应的就是 mounted()钩子函数，因为该钩子函数执行时所有的 DOM 挂载和渲染都已完成，此时在该钩子函数中进行任何 DOM 操作都不会有问题 。<br>在数据变化后要执行的某个操作，而这个操作需要使用随数据改变而改变的 DOM 结构的时候，这个操作都应该放进 Vue.nextTick()的回调函数中。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <!--在这里添加文章结束标志-->
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试题/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/06/travel-04/" rel="next" title="去哪儿项目总结（四）详情页面">
+                <i class="fa fa-chevron-left"></i> 去哪儿项目总结（四）详情页面
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="liuzifu" />
+            
+              <p class="site-author-name" itemprop="name">liuzifu</p>
+              <p class="site-description motion-element" itemprop="description">前端程序媛的养成</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/LZF666" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/ace_arm?t=1" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#button-标签是块级元素还是内联元素？inline-block-的概念是什么？"><span class="nav-number">1.</span> <span class="nav-text">button 标签是块级元素还是内联元素？inline-block 的概念是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#positon-属性值有哪些？"><span class="nav-number">2.</span> <span class="nav-text">positon 属性值有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#盒模型"><span class="nav-number">3.</span> <span class="nav-text">盒模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是媒体查询"><span class="nav-number">4.</span> <span class="nav-text">什么是媒体查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有几种-css-选择器，优先级是什么？"><span class="nav-number">5.</span> <span class="nav-text">有几种 css 选择器，优先级是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是浮动，如何清除浮动？"><span class="nav-number">6.</span> <span class="nav-text">什么是浮动，如何清除浮动？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-有哪些垂直居中方案"><span class="nav-number">7.</span> <span class="nav-text">CSS 有哪些垂直居中方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">8.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说一下-less-或者-sass-中你喜欢的语法"><span class="nav-number">9.</span> <span class="nav-text">说一下 less 或者 sass 中你喜欢的语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入时间戳，输出-yyyy-mm-dd-hh-mm-ss-格式的字符串"><span class="nav-number">10.</span> <span class="nav-text">输入时间戳，输出 yyyy-mm-dd hh:mm:ss 格式的字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-中，-nextTick-是什么，一般用于什么场景？"><span class="nav-number">11.</span> <span class="nav-text">Vue 中，$nextTick 是什么，一般用于什么场景？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuzifu</span>
+
+  
+</div>
+
+
+
+  <div class="powered-by">
+<span id="busuanzi_container_site_uv">
+  本站被<span id="busuanzi_value_site_uv"></span>个小天使访问过
+</span>
+<span class="post-meta-divider">|</span>
+博客全站共<span class="post-count">6.2k</span>字
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+ <!-- 动态背景-->
+
+<script type="text/javascript"
+color="0,0,0" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>
