@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="面试题," />
+  <meta name="keywords" content="Array 数组去重的方法很多 记住下面6种就好啦," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关键词：CSS继承属性 BFC Ajax call,apply,bind 数组去重 类数组的判断 跨域">
-<meta name="keywords" content="面试题">
+<meta name="description" content="法一：利用 ES6 的 set 方法1234function uniq(arr) &amp;#123;    return Array.from(new Set(arr))&amp;#125;uniq([1,1,2,3,5,3,1,5,6,7,4]) 法二：利用对象属性唯一12345678910111213141516function uniq(arr) &amp;#123;    var result = []">
+<meta name="keywords" content="Array 数组去重的方法很多 记住下面6种就好啦">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二份面试题">
-<meta property="og:url" content="https://lzf666.github.io/2018/10/21/interview2/index.html">
+<meta property="og:title" content="数组去重的6种方法">
+<meta property="og:url" content="https://lzf666.github.io/2018/10/21/数组去重/index.html">
 <meta property="og:site_name" content="大斧子">
-<meta property="og:description" content="关键词：CSS继承属性 BFC Ajax call,apply,bind 数组去重 类数组的判断 跨域">
+<meta property="og:description" content="法一：利用 ES6 的 set 方法1234function uniq(arr) &amp;#123;    return Array.from(new Set(arr))&amp;#125;uniq([1,1,2,3,5,3,1,5,6,7,4]) 法二：利用对象属性唯一12345678910111213141516function uniq(arr) &amp;#123;    var result = []">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-21T07:11:44.499Z">
+<meta property="og:updated_time" content="2018-10-21T08:04:31.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二份面试题">
-<meta name="twitter:description" content="关键词：CSS继承属性 BFC Ajax call,apply,bind 数组去重 类数组的判断 跨域">
+<meta name="twitter:title" content="数组去重的6种方法">
+<meta name="twitter:description" content="法一：利用 ES6 的 set 方法1234function uniq(arr) &amp;#123;    return Array.from(new Set(arr))&amp;#125;uniq([1,1,2,3,5,3,1,5,6,7,4]) 法二：利用对象属性唯一12345678910111213141516function uniq(arr) &amp;#123;    var result = []">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://lzf666.github.io/2018/10/21/interview2/"/>
+  <link rel="canonical" href="https://lzf666.github.io/2018/10/21/数组去重/"/>
 
 
 
 
 
-  <title>第二份面试题 | 大斧子</title>
+  <title>数组去重的6种方法 | 大斧子</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/21/interview2/">
+    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/21/数组去重/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuzifu">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第二份面试题</h1>
+          <h1 class="post-title" itemprop="name headline">数组去重的6种方法</h1>
         
 
         <div class="post-meta">
@@ -304,7 +304,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T12:17:57+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T15:12:42+08:00">
                 2018-10-21
               </time>
             
@@ -338,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  836字
+                  560字
                 </span>
               
 
@@ -361,10 +361,6 @@
           
 
           
-              <div class="post-description">
-                  关键词：CSS继承属性 BFC Ajax call,apply,bind 数组去重 类数组的判断 跨域
-              </div>
-          
 
         </div>
       </header>
@@ -379,35 +375,16 @@
       
 
       
-        <h1 id="CSS-中有哪些可以继承的属性"><a href="#CSS-中有哪些可以继承的属性" class="headerlink" title="CSS 中有哪些可以继承的属性"></a>CSS 中有哪些可以继承的属性</h1><p><strong>无继承属性：</strong><br>可以记成“不论何，定背文”，不论怎么样，也要背文章。<br>意思是：</p>
-<p>不（布局）：display</p>
-<p>论（轮廓）：outline</p>
-<p>何（盒子）： width,height,margin,padding,border 等</p>
-<p>定（定位）：float,clear,position,top,right,left,bottom,overflow,clip,z-index 等</p>
-<p>背（背景）：background</p>
-<p>文（文本）：vertical-align,text-shadow,text-decoration,white-space</p>
-<p><strong>可继承属性：</strong><br>可以记为：“字文表列，光可见”<br>字（字体）：font<br>文（文本）：text-align,line-height,color 等<br>表（表格）：border-collapse,border-spacing,empty-cells 等<br>列（列表）：list-style<br>光（光标）：cursor<br>可见（可见性）：visibility</p>
-<h1 id="css-reset-和-normalize-css-的区别"><a href="#css-reset-和-normalize-css-的区别" class="headerlink" title="css reset 和 normalize.css 的区别"></a>css reset 和 normalize.css 的区别</h1><p>因为各大浏览器厂商，没有一个统一的标准，所以它们之间会对 HTML 标签的默认样式渲染不同，比如有的 body 会默认有 8px 的外边距。<br>因此为了能够兼容各个浏览器，使页面的样式统一，这才有了样式重置（css reset）<br>它的目的就是统一不同浏览器之间的默认样式。<br>最初的时候比较粗暴：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  padding: 0;</span><br><span class="line">  margin: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>后面不断发展，有了相对比较温和的方案，就是 normalize.css<br>它保留了默认样式中有用的部分，同时保证了跨浏览器的一致性。</p>
-<h1 id="什么是-BFC？"><a href="#什么是-BFC？" class="headerlink" title="什么是 BFC？"></a>什么是 BFC？</h1><p>BFC 翻译过来是“块级格式化上下文”，是一个独立的渲染区域。<br>里面的元素不超到外面来，而且外面的也不会影响这个矩形里的东西</p>
-<p><strong>哪些元素会生成 BFC?</strong></p>
-<pre><code>根元素
-float 属性不为 none
-position 为 absolute 或 fixed
-display 为 inline-block, table-cell, table-caption, flex, inline-flex
-overflow 不为 visible
-zoom: 1;
-</code></pre><p>作用就是创立一个独立的块级格式化上下文</p>
-<h1 id="原生-js-实现-ajax"><a href="#原生-js-实现-ajax" class="headerlink" title="原生 js 实现 ajax"></a>原生 js 实现 ajax</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHTTPRequest()</span><br><span class="line">xhr.open(&apos;GET&apos;, &apos;url&apos;)</span><br><span class="line">xhr.setRequestHeader(&apos;content-type&apos;,&apos;application/json&apos;)</span><br><span class="line">xhr.onload  = function() &#123;</span><br><span class="line">  if (xhr.status &gt;=200 &amp;&amp; xhr.status &lt;300) &#123;</span><br><span class="line">    console.log(xhr.response.text)</span><br><span class="line">  &#125;else &#123;</span><br><span class="line">    console.log(&apos;error&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="call，apply，bind-的区别"><a href="#call，apply，bind-的区别" class="headerlink" title="call，apply，bind 的区别"></a>call，apply，bind 的区别</h1><p>这三个方法的作用都是改变函数的执行上下文，也就是 this。<br>call,apply 通过设置函数内部的 this 和函数的参数来调用函数并返回函数的返回结果。<br>bind 把函数的 this 及部分参数固定为某个值，返回一个新的函数，调用新的函数的时候可以继续传入参数，最终已固定的参数和继续传入的参数会一起传给原函数，并把原函数的返回值返回。</p>
-<p>call(),apply()的第一个参数相同，就是指定的对象。这个对象就是该函数的执行上下文，也就是 this。<br>call()在第一个参数之后的后续参数都是传入该函数的值，而 apply 只有两个参数，第一个是 this，第二个是一个数组。<br><a href="https://www.cnblogs.com/Shd-Study/archive/2017/03/16/6560808.html" target="_blank" rel="noopener">参考文章</a></p>
-<h1 id="如何实现数组去重"><a href="#如何实现数组去重" class="headerlink" title="如何实现数组去重"></a>如何实现数组去重</h1><p>请看本站文章：《数组去重的 6 种方法》</p>
-<h1 id="如何判断一个对象是否为数组"><a href="#如何判断一个对象是否为数组" class="headerlink" title="如何判断一个对象是否为数组"></a>如何判断一个对象是否为数组</h1><p>法一：<br>Array.isArray(arg)</p>
-<p>法二：<br>Object.prototype.toString.call(arg) === ‘[object Array]’</p>
-<h1 id="类数组如何转换为数组"><a href="#类数组如何转换为数组" class="headerlink" title="类数组如何转换为数组"></a>类数组如何转换为数组</h1><p>法一：<br>Array.from(类数组)</p>
-<p>法二： 把类数组当做是 Array.prototype 上的方法的 this 即可<br>Array.prototype.slice.call(类数组)<br>Array.prototype.concat.call(类数组)<br>或者：<br>[].slice.call(类数组)<br>[].concat.call(类数组)</p>
-<h1 id="怎么实现跨域"><a href="#怎么实现跨域" class="headerlink" title="怎么实现跨域"></a>怎么实现跨域</h1><p>请看本站文章：《跨域的几种方法》</p>
+        <h1 id="法一：利用-ES6-的-set-方法"><a href="#法一：利用-ES6-的-set-方法" class="headerlink" title="法一：利用 ES6 的 set 方法"></a>法一：利用 ES6 的 set 方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function uniq(arr) &#123;</span><br><span class="line">    return Array.from(new Set(arr))</span><br><span class="line">&#125;</span><br><span class="line">uniq([1,1,2,3,5,3,1,5,6,7,4])</span><br></pre></td></tr></table></figure>
+<h1 id="法二：利用对象属性唯一"><a href="#法二：利用对象属性唯一" class="headerlink" title="法二：利用对象属性唯一"></a>法二：利用对象属性唯一</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function uniq(arr) &#123;</span><br><span class="line">    var result = []</span><br><span class="line">    var obj = &#123;&#125;</span><br><span class="line">    for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">        if(!obj[arr[i]]) &#123;</span><br><span class="line">            obj[arr[i]] = 1;</span><br><span class="line">            result.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(obj)</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br><span class="line">uniq([1,1,2,3,5,3,1,5,6,7,4])</span><br><span class="line">//结果：</span><br><span class="line">obj:&#123;1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1&#125;</span><br><span class="line"> result:[1, 2, 3, 5, 6, 7, 4]</span><br></pre></td></tr></table></figure>
+<h1 id="法三：利用数组的-indexOf-下标"><a href="#法三：利用数组的-indexOf-下标" class="headerlink" title="法三：利用数组的 indexOf 下标"></a>法三：利用数组的 indexOf 下标</h1><p>数组中若是没有这个数据，调用数组的 indexOf 方法会返回-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function uniq(arr) &#123;</span><br><span class="line">    var result = []</span><br><span class="line">    for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">       if(result.indexOf(arr[i]) === -1) &#123;</span><br><span class="line">           result.push(arr[i])</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br><span class="line">uniq([1,1,2,3,5,3,1,5,6,7,4])</span><br></pre></td></tr></table></figure>
+<h1 id="法四：sort-排序大法"><a href="#法四：sort-排序大法" class="headerlink" title="法四：sort 排序大法"></a>法四：sort 排序大法</h1><p>sort 可以将数组中的数据按照从小到大或从大到小的顺序排列，排列好顺序的数组和一个新创建的数组进行对比，如果不同则存入这个新数组中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function uniq(arr) &#123;</span><br><span class="line">    var newArr = arr.sort()</span><br><span class="line">    console.log(newArr)</span><br><span class="line">    var result = [newArr[0]]</span><br><span class="line">    console.log(result)</span><br><span class="line">    for(var i=1; i&lt;newArr.length; i++)&#123;</span><br><span class="line">       if(newArr[i] !== result[result.length - 1]) &#123;</span><br><span class="line">          result.push(newArr[i])</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br><span class="line">uniq([1,1,2,3,5,3,1,5,6,7,4])</span><br></pre></td></tr></table></figure>
+<h1 id="法五：利用数组的-includes-方法"><a href="#法五：利用数组的-includes-方法" class="headerlink" title="法五：利用数组的 includes 方法"></a>法五：利用数组的 includes 方法</h1><p>includes 方法：用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function uniq(arr) &#123;</span><br><span class="line">    var result = []</span><br><span class="line">    for(var i=1; i&lt;arr.length; i++)&#123;</span><br><span class="line">       if(!result.includes(arr[i])) &#123;</span><br><span class="line">          result.push(arr[i])</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br><span class="line">uniq([1,1,2,3,5,3,1,5,6,7,4])</span><br></pre></td></tr></table></figure>
+<h1 id="法六：利用数组原型对象上的-splice-方法"><a href="#法六：利用数组原型对象上的-splice-方法" class="headerlink" title="法六：利用数组原型对象上的 splice 方法"></a>法六：利用数组原型对象上的 splice 方法</h1><p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目，该方法会改变原始数组，这个方法好在不用多余的空间，直接在原数组上改动，把重复的项删除。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function unique8(arr)&#123;</span><br><span class="line"> var i,j,len = arr.length;</span><br><span class="line"> for(i = 0; i &lt; len; i++)&#123;</span><br><span class="line">  for(j = i + 1; j &lt; len; j++)&#123;</span><br><span class="line">   if(arr[i] == arr[j])&#123;</span><br><span class="line">    arr.splice(j,1);</span><br><span class="line">    len--;</span><br><span class="line">    j--;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -425,7 +402,7 @@ zoom: 1;
       
         <div class="post-tags">
           
-            <a href="/tags/面试题/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+            <a href="/tags/Array-数组去重的方法很多-记住下面6种就好啦/" rel="tag"><i class="fa fa-tag"></i> Array 数组去重的方法很多 记住下面6种就好啦</a>
           
         </div>
       
@@ -438,8 +415,8 @@ zoom: 1;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/21/interview1/" rel="next" title="第一份面试题">
-                <i class="fa fa-chevron-left"></i> 第一份面试题
+              <a href="/2018/10/21/interview2/" rel="next" title="第二份面试题">
+                <i class="fa fa-chevron-left"></i> 第二份面试题
               </a>
             
           </div>
@@ -447,10 +424,6 @@ zoom: 1;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/21/数组去重/" rel="prev" title="数组去重的6种方法">
-                数组去重的6种方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +575,7 @@ zoom: 1;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-中有哪些可以继承的属性"><span class="nav-number">1.</span> <span class="nav-text">CSS 中有哪些可以继承的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css-reset-和-normalize-css-的区别"><span class="nav-number">2.</span> <span class="nav-text">css reset 和 normalize.css 的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-BFC？"><span class="nav-number">3.</span> <span class="nav-text">什么是 BFC？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原生-js-实现-ajax"><span class="nav-number">4.</span> <span class="nav-text">原生 js 实现 ajax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#call，apply，bind-的区别"><span class="nav-number">5.</span> <span class="nav-text">call，apply，bind 的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何实现数组去重"><span class="nav-number">6.</span> <span class="nav-text">如何实现数组去重</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断一个对象是否为数组"><span class="nav-number">7.</span> <span class="nav-text">如何判断一个对象是否为数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类数组如何转换为数组"><span class="nav-number">8.</span> <span class="nav-text">类数组如何转换为数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么实现跨域"><span class="nav-number">9.</span> <span class="nav-text">怎么实现跨域</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#法一：利用-ES6-的-set-方法"><span class="nav-number">1.</span> <span class="nav-text">法一：利用 ES6 的 set 方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#法二：利用对象属性唯一"><span class="nav-number">2.</span> <span class="nav-text">法二：利用对象属性唯一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#法三：利用数组的-indexOf-下标"><span class="nav-number">3.</span> <span class="nav-text">法三：利用数组的 indexOf 下标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#法四：sort-排序大法"><span class="nav-number">4.</span> <span class="nav-text">法四：sort 排序大法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#法五：利用数组的-includes-方法"><span class="nav-number">5.</span> <span class="nav-text">法五：利用数组的 includes 方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#法六：利用数组原型对象上的-splice-方法"><span class="nav-number">6.</span> <span class="nav-text">法六：利用数组原型对象上的 splice 方法</span></a></li></ol></div>
             
 
           </div>
