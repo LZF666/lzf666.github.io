@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="demo," />
+  <meta name="keywords" content="面试题," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="序言">
-<meta name="keywords" content="demo">
+<meta name="description" content="new 操作符调用函数，内部发生了什么?创建临时对象绑定原型return这个对象 new.target 是什么？当一个函数被用 new 调用时，其内部的 new.target 指向函数自己，否则指向 undefined。 从 url 输入到页面展现第一步：在浏览器输入 url第二步：域名解析  浏览器缓存，浏览器会缓存 DNS 记录一段时间 系统缓存，从 hosts 文件查找是否有该域名和对应的">
+<meta name="keywords" content="面试题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="100个小demo（序）">
-<meta property="og:url" content="https://lzf666.github.io/2018/08/10/100demos-0/index.html">
+<meta property="og:title" content="第三份面试题">
+<meta property="og:url" content="https://lzf666.github.io/2018/10/21/interview3/index.html">
 <meta property="og:site_name" content="大斧子">
-<meta property="og:description" content="序言">
+<meta property="og:description" content="new 操作符调用函数，内部发生了什么?创建临时对象绑定原型return这个对象 new.target 是什么？当一个函数被用 new 调用时，其内部的 new.target 指向函数自己，否则指向 undefined。 从 url 输入到页面展现第一步：在浏览器输入 url第二步：域名解析  浏览器缓存，浏览器会缓存 DNS 记录一段时间 系统缓存，从 hosts 文件查找是否有该域名和对应的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-11T11:22:05.124Z">
+<meta property="og:updated_time" content="2018-10-21T15:35:14.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="100个小demo（序）">
-<meta name="twitter:description" content="序言">
+<meta name="twitter:title" content="第三份面试题">
+<meta name="twitter:description" content="new 操作符调用函数，内部发生了什么?创建临时对象绑定原型return这个对象 new.target 是什么？当一个函数被用 new 调用时，其内部的 new.target 指向函数自己，否则指向 undefined。 从 url 输入到页面展现第一步：在浏览器输入 url第二步：域名解析  浏览器缓存，浏览器会缓存 DNS 记录一段时间 系统缓存，从 hosts 文件查找是否有该域名和对应的">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://lzf666.github.io/2018/08/10/100demos-0/"/>
+  <link rel="canonical" href="https://lzf666.github.io/2018/10/21/interview3/"/>
 
 
 
 
 
-  <title>100个小demo（序） | 大斧子</title>
+  <title>第三份面试题 | 大斧子</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/08/10/100demos-0/">
+    <link itemprop="mainEntityOfPage" href="https://lzf666.github.io/2018/10/21/interview3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liuzifu">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">100个小demo（序）</h1>
+          <h1 class="post-title" itemprop="name headline">第三份面试题</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T13:28:19+08:00">
-                2018-08-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T22:58:39+08:00">
+                2018-10-21
               </time>
             
 
@@ -314,28 +314,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/100demos/" itemprop="url" rel="index">
-                    <span itemprop="name">100demos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -360,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  144字
+                  326字
                 </span>
               
 
@@ -383,10 +361,6 @@
           
 
           
-              <div class="post-description">
-                  序言
-              </div>
-          
 
         </div>
       </header>
@@ -401,7 +375,16 @@
       
 
       
-        <p>&emsp;&emsp;以前有做一些小 demo，但是零零碎碎的。放着有点可惜，拿出来又感觉有点鸡肋。无意中想起了曾经看过的一个视频，100 天做 100 件小事，挺有意思的，想想干脆整理出一个作品集，放在一起，也回顾一下自己当初是怎么做的。<br>&emsp;&emsp;真的是非常小的练习作品，不过谁都是从新手期过来的，希望能帮助到那些才接触到前端的盆友们吧。<br>&emsp;&emsp;这里只是一个序言，算是开个头吧。</p>
+        <h1 id="new-操作符调用函数，内部发生了什么"><a href="#new-操作符调用函数，内部发生了什么" class="headerlink" title="new 操作符调用函数，内部发生了什么?"></a>new 操作符调用函数，内部发生了什么?</h1><p>创建临时对象<br>绑定原型<br>return这个对象</p>
+<h1 id="new-target-是什么？"><a href="#new-target-是什么？" class="headerlink" title="new.target 是什么？"></a>new.target 是什么？</h1><p>当一个函数被用 new 调用时，其内部的 new.target 指向函数自己，否则指向 undefined。</p>
+<h1 id="从-url-输入到页面展现"><a href="#从-url-输入到页面展现" class="headerlink" title="从 url 输入到页面展现"></a>从 url 输入到页面展现</h1><p>第一步：在浏览器输入 url<br>第二步：域名解析</p>
+<ol>
+<li>浏览器缓存，浏览器会缓存 DNS 记录一段时间</li>
+<li>系统缓存，从 hosts 文件查找是否有该域名和对应的 IP</li>
+<li>路由器缓存——一般路由器也会缓存域名信息</li>
+<li>ISP DNS 缓存——比如到电信的 DNS 上查找缓存</li>
+<li>如果都没有找到，则向根域名服务器查找域名对应 IP，根据域名服务器把请求转发到下一级，直到找到了 IP<br>第三步：服务器处理，服务器处理请求，返回页面信息<br>第四步： 浏览器接受并处理：HTML 字符串被读取，解析到 link 标签后重新发送请求获取 css，解析到 script 标签后发送请求获取 js，并执行代码，解析到 img 标签后发送请求获取图片资源。浏览器根据 HTML,CSS 计算得到渲染树，绘制到屏幕上，js 被执行。</li>
+</ol>
 
       
     </div>
@@ -419,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/demo/" rel="tag"><i class="fa fa-tag"></i> demo</a>
+            <a href="/tags/面试题/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
           
         </div>
       
@@ -432,15 +415,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/21/跨域/" rel="next" title="怎样实现跨域">
+                <i class="fa fa-chevron-left"></i> 怎样实现跨域
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/11/100demos-1/" rel="prev" title="100个小demo(一)">
-                100个小demo(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -492,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -573,6 +565,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#new-操作符调用函数，内部发生了什么"><span class="nav-number">1.</span> <span class="nav-text">new 操作符调用函数，内部发生了什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#new-target-是什么？"><span class="nav-number">2.</span> <span class="nav-text">new.target 是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从-url-输入到页面展现"><span class="nav-number">3.</span> <span class="nav-text">从 url 输入到页面展现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
